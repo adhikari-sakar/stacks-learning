@@ -1,0 +1,18 @@
+spring:
+  cache:
+    type: redis
+    host: 172.18.0.2
+    port: 6379
+    redis:
+      time-to-live: 60000
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/demo
+    username: sakar
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
